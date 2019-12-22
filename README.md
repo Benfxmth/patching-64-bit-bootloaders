@@ -26,7 +26,7 @@ Step 3: Decrypt the bootloader you are trying to patch with img4lib with this co
 
 Step 4: Open the decrypted bootloader in IDA Pro 64 and set Processor type to `ARM Little-endian`. Once that is done, click Select all in Edit toolbar and type "C" to convert to readable disassembly. 
 
-Step 5: Find `image4_property_callback_interposer` by going to Search, immediate value..., and find the immediate value `0x4348`. In graph mode, go to the top of the function, click on `STP X29, X30` in the beginning of the function, then click on Edit > Patch program > Change byte and change `FD 7B BF A9 FD 03 00 91` to `00 00 80 D2 C0 03 5F D6`.
+Step 5: Find `image4_property_callback_interposer` by going to Search > immediate value..., and find the immediate value `0x4348`. In graph mode, go to the top of the function, click on `STP X29, X30` in the beginning of the function, then click on Edit > Patch program > Change byte and change `FD 7B BF A9 FD 03 00 91` to `00 00 80 D2 C0 03 5F D6`.
 
 Step 6: On Stage 2 bootloaders (iBoot and iBEC), you also need to patch `debug-enabled` and `development-cert`. Search for `debug-enabled`, click on the first `BL` for both `debug-enabled` and `development-cert`, and change the first 4 bytes to `20 00 80 D2`. Click Program > Apply patches to input file... to save the patched iBoot. 
 
