@@ -12,9 +12,9 @@ This is a guide for patching 64-bit iOS bootloaders manually for booting with ch
 
 * IDA Pro
 
-* [img4lib] (https://github.com/xerub/img4lib)
+* [img4lib](https://github.com/xerub/img4lib)
 
-* [img4tool] (https://github.com/tihmstar/img4tool)
+* [img4tool](https://github.com/tihmstar/img4tool)
 
 **Decrypting files** 
 
